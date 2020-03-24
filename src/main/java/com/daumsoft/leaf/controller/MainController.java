@@ -14,9 +14,9 @@ public class MainController {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @GetMapping("/user")
-    public String start() {
-        // User user = new User("starhn87", "1234", "Lee Seungwoo", "web");
-        // model.addAttribute("user", user);
+    public String start(Model model) {
+        User user = new User("starhn87", "1234", "Lee Seungwoo", "web");
+        model.addAttribute("user", user);
         logger.info("start!!!");
         return "test";
     }
